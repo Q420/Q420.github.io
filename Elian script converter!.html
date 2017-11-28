@@ -1,0 +1,268 @@
+ <!DOCTYPE html>
+ <html> 
+ <!-- 
+The Elian Script
+
+An Alternative Writing System Whose Properties 
+Combine the Linearity of Spelling with the Free-Form Nature of Drawing
+
+This writing system was developed by C. C. Elian
+
+====== This app was written by Ben Kraft under the "I kick ass" License. ======
+
+
+ -->
+<head>
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/jwAA/+cAAP/zAAD/+QAA//wAAP/+AAD/5gAA/+YAAP/+AAAB/gAAff4AAH2AAAB9/wAAff8AAH3/AAAB/wAA" rel="icon" type="image/x-icon" />
+
+</head>
+  <meta charset="utf-8">
+    <title>Elian Script Converter</title>
+   <style>
+h1 {
+            margin-top: 40px;
+            margin-bottom: 70px;
+            padding-top: 15px;
+            padding-right: 30px;
+            padding-left: 80px;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            color: darkgrey;
+            text-shadow: 1px 1px 2px white, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        header {} h3 {
+            margin-left: 80px;
+            margin-right: 15px;
+            text-align: right;
+            color: silver;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue;
+        }
+        pre {
+            font-family: 'Palatino';
+            color: white;
+            margin-left: 55px;
+
+            text-shadow: 1px 1px 2px white, 0 0 25px blue, 0 0 5px darkblue;
+            max-width: 85%;
+            height: 81px;
+            
+            
+            
+            text-align: center;
+            white-space: pre-wrap;
+            word-spacing: 8px;
+            word-wrap: break-word;
+            border-style: inset;
+            font-size: 40px;
+            background: rgb(240, 255, 255); /* Fallback for older browsers without RGBA-support */
+            background: rgba(0, 0, 0, 0.3);
+            background-image: url('')
+            padding-left: 8px;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+
+        }
+        html {
+            font-family: 'Palatino';
+            font-size: 22px;
+            background-size: cover;
+        }
+        body {
+            font-family: 'Palatino';
+            
+            width: 75%;
+            height: 100%;
+            min-width: 900px;
+            max-width: 100%;
+            position: static;
+            margin: 0 auto;
+            background-image: url('https://i.pinimg.com/originals/46/0c/bd/460cbd085e34e1610880f1b34ec8e79e.png');
+            background-size: cover;
+        }
+        .lastResult {
+            padding: 3px;
+            color: black;
+        }
+        a.button {
+            font-family: 'Palatino';
+            margin-bottom: 7px;
+            margin-top: 7px;
+            margin-left: 80px;
+            padding: .25em;
+            text-decoration: all;
+            color: initial;
+            -webkit-appearance: button;
+            -moz-appearance: button;
+            appearance: button;
+        }
+        button {
+            font-family: 'Palatino';
+            margin-bottom: 7px;
+            margin-left: 678px;
+        }
+        input:focus:-webkit-input-placeholder {
+            color: transparent;
+        }
+        input:focus:-moz-placeholder {
+            color: transparent;
+        }
+        input {
+            margin-left: 80px;
+            font-family: 'Palatino';
+            font-size: 25px;
+            color: white;
+            overflow: auto;
+            max-width: 800px;
+            margin-right: 80px;
+            margin-left: 80px;
+            resize: none;
+            text-align: left;
+            text-indent: 7px;
+            background-color: white;
+            border-style: inset;
+            background: rgb(0, 139, 139); /* Fallback for older browsers without RGBA-support */
+            background: rgba(0, 139, 139, 0.3);
+
+        }
+        p {
+            background-color: white;
+            padding-left: 8px;
+            margin-right: 200px;
+            width: 275px;
+            border-style: solid;
+            border-width: 1px;
+            position: center;
+        }
+        
+
+        #container {
+            display: block;
+            margin: auto;
+            height: 100%;
+            width: 75%;
+            height: 100%;
+            min-width: 900px;
+            max-width: 100%;
+            position: static;
+            margin: 0 auto;
+            border-style: inset;
+            background-image: url('https://i.imgur.com/iipgZmh.gif');
+            background-size: unset;
+        }
+        #preview {
+
+        }
+ 
+   </style>
+
+
+
+
+
+   
+
+<!--<textarea  >	
+</textarea>-->
+
+<body>
+
+    <div id="container">
+    <h1>Elian Script Converter</h1>
+<form onsubmit="run()" onsubmit="javascript:run()" >
+  
+  <input   style="width:80%;height:45px;" id="in" placeholder="Tom is gay:"> </input>
+
+</form>
+
+	<div>
+	<a style="float: left;"  class="button style="float:right" onclick="javascript:run()">Submit</a>
+	</div>
+    <div><a style="margin-left: 594px;" class="button" id="clearbutton" TYPE="button" onClick="history.go(0)">Clear </a>
+    </div> 
+			<hr style="margin: 40px; "></hr>
+
+			
+<div id="preview">
+
+    <pre id="out" ></pre>
+</div>
+	
+
+<h3 href="https://www.reddit.com/user/Mr--Night/.html" > By: Mr--Night </h3>
+</div>
+</body>
+<script type="text/javascript">
+// Hail Satan .... just kidding.// 
+
+function run() {
+event.preventDefault() 
+var textIn = document.getElementById("in")
+             document.getElementById("out").innerHTML = Elian(textIn.value).join("")
+   
+}
+
+
+
+
+// Letter array //
+function Elian(text) {
+  var charmap = {
+    //Letters:
+    a: "ﬧ",
+    b: "コ",
+    c: "┘",
+    d: "п",
+    e: "ߛ",
+    f: "ப",
+    g: "厂",
+    h: "ⵎ",
+    i: "ட",
+    j: "ᒣ",
+    k: "ᓗ",
+    l: "ᒧ",
+    m: "ᒉ",
+    n: "ᑭ",
+    o: "ᘂ",
+    p: "ᒥ",
+    q: "ᓕ",
+    r: "ᒪ",
+    s: "ᒭ",
+    t: "ᓘ",
+    u: "ᒨ",
+    v: "ᒕ",
+    w: "ᑮ",
+    x: "ᒎ",
+    y: "ᓟ",
+    z: "ᓛ",
+
+    //Numbers:
+
+    0:"ᚗ",
+    1:"ᚁ", 
+    2:"ᚂ",
+    3:"ᚃ",
+    4:"ᚄ",
+    5:"ᚅ",
+    6:"ᚆ",
+    7:"ᚇ",
+    8:"ᚈ",
+    9:"ᚉ",
+  } 
+  var letters = text.split("")
+	var replacer = (ch) => {
+  	var replacement = charmap[ch.toLowerCase()]
+    return replacement || ch
+  }
+  return letters.map(replacer)
+}
+function Clear(){
+     document.getElementById('in').value = "";
+     document.getElementById('out').value = "";
+}
+
+
+
+
+</script>
+</html>
